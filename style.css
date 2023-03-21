@@ -67,6 +67,36 @@ img {
   flex: none;
 }
 
+/* NAVBAR -----------------------------------------*/
+nav {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 150px;
+  height: 100%;
+  background-color: transparent;
+  padding: 20px;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  margin-bottom: 10px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+}
+
 /* STYLE FOR THE COLLAPSIBLE --------------------------------- */
 
 /* Style the button that is used to open and close the collapsible content */
@@ -219,16 +249,6 @@ li {
 .carousel__slide:nth-child(even) {
   background-color: #99f;
 }
-
-/* .carousel__slide:before {
-  content: counter(item);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate3d(-50%, -40%, 70px);
-  color: #fff;
-  font-size: 2em;
-} */
 
 @keyframes tonext {
   75% {
@@ -417,17 +437,3 @@ li {
 .carousel__navigation-button.active {
   background-color: red; /* add any other styles you want to apply to the active button */
 }
-/* .carousel::before,
-.carousel::after {
-  content: "";
-  z-index: 1;
-
-  background-size: 1.5rem 1.5rem;
-  background-repeat: no-repeat;
-  background-position: center center;
-  color: #fff;
-  font-size: 2.5rem;
-  line-height: 4rem;
-  text-align: center;
-  pointer-events: none;
-} */
