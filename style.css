@@ -2,8 +2,14 @@ html,
 body,
 .holster {
   height: 100%;
+
+  overflow-y: hidden; /* Hide vertical scrollbar */
+  overflow-x: hidden; /* Hide horizontal scrollbar */
 }
 * {
+  box-sizing: border-box;
+  scrollbar-color: transparent transparent; /* thumb and track color */
+  scrollbar-width: 0px;
   margin: 0;
   padding: 0;
 }
@@ -61,10 +67,6 @@ img {
   flex: none;
 }
 
-.container > div:nth-child(even) {
-  background-color: aqua;
-}
-
 /* STYLE FOR THE COLLAPSIBLE --------------------------------- */
 
 /* Style the button that is used to open and close the collapsible content */
@@ -84,7 +86,7 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: center;
-
+  z-index: 1;
   grid-column: 3 / 4;
 }
 
@@ -161,12 +163,6 @@ img {
   }
 }
 
-* {
-  box-sizing: border-box;
-  scrollbar-color: transparent transparent; /* thumb and track color */
-  scrollbar-width: 0px;
-}
-
 *::-webkit-scrollbar {
   width: 0;
 }
@@ -199,11 +195,6 @@ li {
 }
 
 .carousel__viewport {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
   display: flex;
   overflow-x: scroll;
   counter-reset: item;
@@ -391,11 +382,9 @@ li {
 }
 
 .carousel__navigation {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
   text-align: center;
+  z-index: 1;
+  grid-column: 2;
 }
 
 .carousel__navigation-list,
@@ -425,7 +414,10 @@ li {
   right: -1rem;
 }
 
-.carousel::before,
+.carousel__navigation-button.active {
+  background-color: red; /* add any other styles you want to apply to the active button */
+}
+/* .carousel::before,
 .carousel::after {
   content: "";
   z-index: 1;
@@ -438,4 +430,4 @@ li {
   line-height: 4rem;
   text-align: center;
   pointer-events: none;
-}
+} */
