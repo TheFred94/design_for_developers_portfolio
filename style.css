@@ -11,9 +11,6 @@ body,
   --teal: #89d9c2;
   --black: #393e40;
   --white: #f2f2f2;
-  background-image: url(images/Artboard\ 1.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 * {
