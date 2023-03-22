@@ -2,10 +2,17 @@ html,
 body,
 .holster {
   height: 100%;
-
   overflow-y: hidden; /* Hide vertical scrollbar */
   overflow-x: hidden; /* Hide horizontal scrollbar */
+
+  --light_purple: #917ed9;
+  --dark_puple: #7a65b0;
+  --blue: #79bed9;
+  --teal: #89d9c2;
+  --black: #393e40;
+  --white: #f2f2f2;
 }
+
 * {
   box-sizing: border-box;
   scrollbar-color: transparent transparent; /* thumb and track color */
