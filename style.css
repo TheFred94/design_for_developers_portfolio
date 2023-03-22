@@ -11,6 +11,9 @@ body,
   --teal: #89d9c2;
   --black: #393e40;
   --white: #f2f2f2;
+  background-image: url(images/Artboard\ 1.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 * {
@@ -19,6 +22,30 @@ body,
   scrollbar-width: 0px;
   margin: 0;
   padding: 0;
+}
+
+/* FONTS */
+h1 {
+  font-family: "Bebas Neue";
+}
+
+h2 {
+  font-family: "Bebas Neue";
+}
+
+h3 {
+  font-family: "Jost", sans-serif;
+}
+p {
+  font-family: "Jost", sans-serif;
+}
+
+a {
+  font-family: "Jost", sans-serif;
+}
+
+button {
+  font-family: "Jost", sans-serif;
 }
 
 /* GENERAL */
@@ -249,13 +276,13 @@ li {
   position: relative;
   flex: 0 0 100%;
   width: 100%;
-  background-color: #f99;
+  /* background-color: #f99; */
   counter-increment: item;
 }
 
-.carousel__slide:nth-child(even) {
+/* .carousel__slide:nth-child(even) {
   background-color: #99f;
-}
+} */
 
 @keyframes tonext {
   75% {
@@ -360,13 +387,13 @@ li {
   position: relative;
   flex: 0 0 100%;
   width: 100%;
-  background-color: #f99;
+  /* background-color: #f99; */
   counter-increment: item;
 }
 
-.carousel__slide:nth-child(even) {
+/* .carousel__slide:nth-child(even) {
   background-color: #99f;
-}
+} */
 
 .carousel__slide:before {
   position: absolute;
