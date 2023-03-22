@@ -22,3 +22,13 @@ for (i = 0; i < coll.length; i++) {
     }
   });
 }
+
+function scrollToSection(event) {
+  event.preventDefault(); // prevent default behavior of clicking on a link
+
+  const targetId = event.target.getAttribute("href"); // get the href value of the clicked link
+  const targetElement = document.querySelector(targetId); // get the target element to scroll to
+
+  targetElement.scrollIntoView({ behavior: "smooth" }); // scroll smoothly to the target element
+  body.classList.toggle("open");
+}

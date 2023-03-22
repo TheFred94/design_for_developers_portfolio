@@ -405,6 +405,9 @@ li {
   text-align: center;
   z-index: 1;
   grid-column: 2;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
 }
 
 .carousel__navigation-list,
