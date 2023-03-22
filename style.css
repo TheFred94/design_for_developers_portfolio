@@ -11,6 +11,7 @@ body,
   --teal: #89d9c2;
   --black: #393e40;
   --white: #f2f2f2;
+  --p_size: clamp(1rem, 0.384rem + 2.629vw, 2.75rem);
 }
 
 * {
@@ -35,10 +36,12 @@ h3 {
 }
 p {
   font-family: "Jost", sans-serif;
+  font-size: var(--p_size);
 }
 
 a {
   font-family: "Jost", sans-serif;
+  font-size: var(--p_size);
 }
 
 button {
