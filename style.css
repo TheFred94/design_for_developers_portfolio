@@ -442,6 +442,19 @@ li {
   scroll-snap-align: center;
 }
 
+#carousel__slide1 {
+  background-color: var(--light_purple);
+}
+#carousel__slide2 {
+  background-color: var(--teal);
+}
+#carousel__slide3 {
+  background-color: var(--yellow);
+}
+#carousel__slide4 {
+  background-color: var(--light_purple);
+}
+
 @media (hover: hover) {
   .carousel__snapper {
     animation-name: tonext, snap;
@@ -499,5 +512,5 @@ li {
 }
 
 .chosenslide {
-  background-color: var(--light_purple);
+  background-color: var(--white);
 }
