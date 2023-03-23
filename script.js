@@ -1,11 +1,12 @@
 "use strict";
-import { animate } from "https://cdn.skypack.dev/motion";
+import { animate, stagger, timeline } from "https://cdn.skypack.dev/motion";
 
 const navLinks = document.querySelectorAll("nav a");
 navLinks.forEach((link) => link.addEventListener("click", scrollToSection));
 
 window.addEventListener("load", function () {
   animateOnLoad();
+  spanOnLoad();
 });
 
 let slides = "slide1";
@@ -66,4 +67,14 @@ function scrollToSection(event) {
   const targetElement = document.querySelector(targetId); // get the target element to scroll to
 
   targetElement.scrollIntoView({ behavior: "smooth" }); // scroll smoothly to the target element
+}
+
+function spanOnLoad() {
+  animate(".accent", { scaleX: [0, 1] }, { duration: 1.5, delay: stagger(0.3) });
+
+  const sequence = [
+    [".accent", { scaleX: [0, 1] }, { duration: 1.5, delay: stagger(0.3) }],
+    [".accent", { translateX: -40 }, { duration: 1.5, delay: stagger(0.2) }],
+  ];
+  timeline(sequence, { repeat: "0" });
 }
