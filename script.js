@@ -1,5 +1,5 @@
 "use strict";
-
+let slides = "slide1";
 let coll = document.getElementsByClassName("collapsible");
 let i;
 
@@ -31,4 +31,14 @@ function scrollToSection(event) {
 
   targetElement.scrollIntoView({ behavior: "smooth" }); // scroll smoothly to the target element
   body.classList.toggle("open");
+}
+
+const slideButtons = document.querySelectorAll("li a");
+slideButtons.forEach((slide) => slide.addEventListener("click", chooseSlide));
+
+function chooseSlide() {
+  console.log(slides);
+  slides = this.dataset.category;
+  document.querySelector(".chosenslide").classList.remove("chosenslide");
+  this.classList.add("chosenslide");
 }

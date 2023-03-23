@@ -155,7 +155,6 @@ nav a {
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.active,
 .collapsible:hover {
   background-color: #ccc;
 }
@@ -175,10 +174,6 @@ nav a {
   color: white;
   float: right;
   margin-left: 5px;
-}
-
-.active:after {
-  content: "\2796"; /* Unicode character for "minus" sign (-) */
 }
 
 /* CAROUSEL */
@@ -453,12 +448,10 @@ li {
   display: inline-block;
   width: 1.5rem;
   height: 1.5rem;
-  background-color: #333;
+  background-color: var(--black);
   background-clip: content-box;
   border: 0.25rem solid transparent;
   border-radius: 50%;
-  font-size: 0;
-  transition: transform 0.1s;
 }
 
 .carousel::before,
@@ -471,6 +464,6 @@ li {
   right: -1rem;
 }
 
-.carousel__navigation-button.active {
-  background-color: red; /* add any other styles you want to apply to the active button */
+.chosenslide {
+  background-color: red;
 }
