@@ -1,4 +1,10 @@
 "use strict";
+import { animate } from "https://cdn.skypack.dev/motion";
+
+window.addEventListener("load", function () {
+  animateOnLoad();
+});
+
 let slides = "slide1";
 let coll = document.getElementsByClassName("collapsible");
 let i;
@@ -33,12 +39,29 @@ function scrollToSection(event) {
   body.classList.toggle("open");
 }
 
-const slideButtons = document.querySelectorAll("li a");
+const slideButtons = document.querySelectorAll("ol li a");
 slideButtons.forEach((slide) => slide.addEventListener("click", chooseSlide));
+
+function animateOnLoad() {
+  document.querySelectorAll(".carousel__navigation-button.chosenslide.dot").forEach(function (dotButton) {
+    animate(dotButton, { y: -10 }, { duration: 0.5, easing: "ease-out", direction: "alternate", repeat: "Infinity" });
+  });
+}
 
 function chooseSlide() {
   console.log(slides);
   slides = this.dataset.category;
+
   document.querySelector(".chosenslide").classList.remove("chosenslide");
+
+  document.querySelectorAll(".carousel__navigation-button.dot").forEach(function (dotButton) {
+    dotButton.classList.remove("dot");
+    animate(dotButton, { y: 0 });
+  });
+
   this.classList.add("chosenslide");
+  this.classList.add("dot");
+  animate(".dot", { y: 0 });
+  console.log("removed animation");
+  animate(".dot", { y: -10 }, { duration: 0.5, easing: "ease-out", direction: "alternate", repeat: "Infinity" });
 }
