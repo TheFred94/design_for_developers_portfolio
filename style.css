@@ -11,6 +11,7 @@ body,
   --teal: #89d9c2;
   --black: #393e40;
   --white: #f2f2f2;
+  --yellow: #ffd602;
   --p_size: clamp(1rem, 0.384rem + 2.629vw, 2.75rem);
 }
 
@@ -24,6 +25,7 @@ body,
 
 /* FONTS */
 h1 {
+  grid-column: 2;
   font-family: "Bebas Neue";
 }
 
@@ -54,7 +56,39 @@ img {
   height: auto;
 }
 
+span {
+  display: block;
+
+  height: 7px;
+  border-radius: 5px;
+
+  margin-bottom: 1rem;
+}
+
+.accent_1 {
+  margin-right: 10rem;
+  width: 200px;
+  background: var(--dark_puple);
+}
+.accent_2 {
+  margin-right: 1rem;
+  width: 250px;
+  background: var(--teal);
+}
+.accent_3 {
+  margin-right: 8rem;
+  width: 170px;
+  background: var(--yellow);
+}
+
 /* GRIDS ------------------------------ */
+
+#portfolio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
 .project_container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -155,7 +189,6 @@ nav a {
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.active,
 .collapsible:hover {
   background-color: #ccc;
 }
@@ -175,10 +208,6 @@ nav a {
   color: white;
   float: right;
   margin-left: 5px;
-}
-
-.active:after {
-  content: "\2796"; /* Unicode character for "minus" sign (-) */
 }
 
 /* CAROUSEL */
@@ -453,12 +482,10 @@ li {
   display: inline-block;
   width: 1.5rem;
   height: 1.5rem;
-  background-color: #333;
+  background-color: var(--black);
   background-clip: content-box;
   border: 0.25rem solid transparent;
   border-radius: 50%;
-  font-size: 0;
-  transition: transform 0.1s;
 }
 
 .carousel::before,
@@ -471,6 +498,6 @@ li {
   right: -1rem;
 }
 
-.carousel__navigation-button.active {
-  background-color: red; /* add any other styles you want to apply to the active button */
+.chosenslide {
+  background-color: var(--light_purple);
 }
