@@ -499,5 +499,5 @@ li {
 }
 
 .chosenslide {
-  background-color: red;
+  background-color: var(--light_purple);
 }
