@@ -79,6 +79,6 @@ function spanOnLoad() {
   timeline(sequence, { repeat: "0" });
 }
 
-inView(".carousel__viewport", ({ target }) => {
-  animate(target.querySelector(".carousel__slide"), { opacity: 1, transform: "none" }, { delay: 0.2, duration: 0.9, easing: [0.17, 0.55, 0.55, 1] });
+inView(".carousel__slide", ({ target }) => {
+  animate(target.querySelector(".carousel__content"), { opacity: 1, transform: "none" }, { delay: 0.4, duration: 0.9, easing: [0.17, 0.55, 0.55, 1] });
 });
