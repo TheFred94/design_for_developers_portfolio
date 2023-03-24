@@ -116,7 +116,7 @@ span {
 }
 
 .container.y {
-  width: 101%;
+  width: 102%;
   height: 100%;
   flex-flow: column nowrap;
 }
@@ -286,7 +286,7 @@ li {
 .carousel {
   perspective: 100px;
   grid-column: 1 / 4;
-  position: relative;
+
   grid-template-rows: 100px 100px 1fr 50px;
 }
 
@@ -301,7 +301,6 @@ li {
 .carousel__slide {
   position: relative;
   flex: 0 0 100%;
-  width: 100%;
   /* background-color: #f99; */
   counter-increment: item;
   grid-template-rows: 100px 100px 1fr 50px;
