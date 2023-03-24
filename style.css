@@ -187,8 +187,8 @@ nav a {
   display: flex;
   flex-direction: column;
   z-index: 1;
-  grid-column: 3 /6;
-  grid-row: 4;
+  grid-column: 4 /6;
+  grid-row: 3 / 7;
 }
 
 .collapsible_container,  
@@ -296,8 +296,8 @@ li {
 .carousel_img_container {
   display: flex;
   align-items: center;
-  grid-column: 3 / 6;
-  grid-row: 3;
+  grid-column: 2 / 4;
+  grid-row: 3 / 4;
 }
 
 .carousel__slide {
@@ -305,7 +305,10 @@ li {
   flex: 0 0 100%;
   /* background-color: #f99; */
   counter-increment: item;
-  grid-template-rows: 100px 100px 1fr 50px;
+  grid-template-columns: 170px 1fr 1fr 1fr 1fr;
+  grid-template-rows: 150px 1fr 1fr 1fr 1fr;
+  grid-row: 1 / 7;
+  grid-column: 1 / 6;
 }
 
 .project_subhead {
@@ -394,6 +397,8 @@ li {
 }
 
 .carousel__viewport {
+  grid-row: 1 / 7;
+  grid-column: 1/ 6;
   position: absolute;
   overflow: hidden;
   overflow-x: scroll;
@@ -451,7 +456,7 @@ li {
 .carousel__slide .carousel__content {
   display: block;
   display: grid;
-  transform: translateX(-100px);
+  transform: translateX(0);
   opacity: 0;
   grid-column: 1 / 4;
   grid-row: 1 / 7;
