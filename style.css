@@ -289,7 +289,7 @@ li {
   perspective: 100px;
   grid-column: 1 / 4;
 
-  grid-template-columns: 140px 1fr 1fr 1fr 1fr;
+  grid-template-columns: 170px 1fr 1fr 1fr 1fr;
   grid-template-rows: 150px 1fr 1fr 1fr 1fr;
 }
 
