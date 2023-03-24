@@ -1,5 +1,5 @@
 "use strict";
-import { animate, stagger, timeline } from "https://cdn.skypack.dev/motion";
+import { animate, stagger, timeline, inView } from "https://cdn.skypack.dev/motion";
 
 const navLinks = document.querySelectorAll("nav a");
 navLinks.forEach((link) => link.addEventListener("click", scrollToSection));
@@ -78,3 +78,7 @@ function spanOnLoad() {
   ];
   timeline(sequence, { repeat: "0" });
 }
+
+inView(".carousel__viewport", ({ target }) => {
+  animate(target.querySelector(".carousel__slide"), { opacity: 1, transform: "none" }, { delay: 0.2, duration: 0.9, easing: [0.17, 0.55, 0.55, 1] });
+});
