@@ -4,7 +4,7 @@ body,
   height: 100%;
   overflow-y: hidden; /* Hide vertical scrollbar */
   overflow-x: hidden; /* Hide horizontal scrollbar */
-
+  background-color: var(--white);
   --light_purple: #917ed9;
   --dark_puple: #7a65b0;
   --blue: #79bed9;
