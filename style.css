@@ -12,8 +12,8 @@ body,
   --black: #393e40;
   --white: #f2f2f2;
   --yellow: #ffd602;
-  --p_size: clamp(1.2rem, 0.384rem + 2.629vw, 2.4rem);
-  --a_size: clamp(1rem, 0.384rem + 2.629vw, 2rem);
+  --p_size: clamp(1.5rem, 0.384rem + 2.629vw, 2.2rem);
+  --a_size: clamp(1rem, 0.384rem + 2.629vw, 1.5rem);
 }
 
 * {
@@ -29,6 +29,7 @@ h1 {
   color: var(--black);
   grid-column: 2;
   font-family: "Bebas Neue";
+  margin-top: 15rem;
 }
 
 h2 {
@@ -41,18 +42,26 @@ h2 {
 h3 {
   color: var(--white);
   z-index: 1;
-  font-family: "Jost", sans-serif;
+  font-family: "Bebas Neue", sans-serif;
+  padding-top: 1.5rem;
+}
+h4 {
+  justify-self: flex-end;
+  padding-top: 5rem;
+  color: #dbdada;
+  z-index: 1;
+  font-family: "Bebas Neue", sans-serif;
 }
 p {
   font-family: "Jost", sans-serif;
   font-size: var(--p_size);
+  max-width: 60ch;
 }
 
 #portfolio > span {
   display: block;
   height: 7px;
   border-radius: 5px;
-  margin-bottom: 1rem;
 }
 
 nav ul li a {
@@ -66,6 +75,7 @@ nav ul li a {
   font-family: "Jost", sans-serif;
   position: relative;
   font-size: var(--a_size);
+  font-weight: 500;
 }
 
 nav ul li a::before {
@@ -145,7 +155,7 @@ button span:hover::before {
 
 /* GENERAL */
 img {
-  width: 100%;
+  width: 70%;
   height: auto;
 }
 
@@ -153,21 +163,26 @@ img {
   margin-right: 10rem;
   width: 200px;
   background: var(--dark_puple);
+  margin-bottom: 1rem;
 }
 .accent_2 {
   margin-right: 1rem;
   width: 250px;
   background: var(--teal);
+  margin-bottom: 1rem;
 }
 .accent_3 {
   margin-right: 8rem;
+  margin-bottom: 8rem;
   width: 170px;
   background: var(--yellow);
+  margin-bottom: 10rem;
 }
 
 /* GRIDS ------------------------------ */
 
 #portfolio {
+  display: grid;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -265,6 +280,12 @@ nav a {
   font-weight: 700;
 }
 
+.active {
+  background-color: var(--teal);
+  color: var(--white);
+  border-radius: 4px;
+}
+
 .collapsible_container {
   display: flex;
   flex-direction: column;
@@ -272,6 +293,7 @@ nav a {
   grid-column: 2 / 6;
   grid-row: 4;
   background-color: transparent;
+  padding-inline: 5rem;
 }
 
 /* Style the collapsible content. Note: hidden by default */
