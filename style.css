@@ -54,7 +54,41 @@ a {
 }
 
 button {
+  border-style: none;
+  cursor: pointer;
+  background-color: transparent;
+  z-index: 1;
   font-family: "Jost", sans-serif;
+  position: relative;
+}
+
+button span::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  inset: 0 0 0 0;
+  z-index: -1;
+  transition: transform 0.4s ease;
+  border-radius: 4px;
+}
+
+button span::before {
+  background: var(--teal);
+}
+
+button span::before {
+  transform: scaleX(0);
+  transform-origin: bottom right;
+}
+
+button span:hover {
+  transition: 0.5s;
+  color: white;
+}
+
+button span:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
 /* GENERAL */
@@ -302,6 +336,7 @@ li {
   align-items: center;
   grid-column: 2 / 7;
   grid-row: 3 / 4;
+  justify-content: center;
 }
 
 .carousel__slide {
