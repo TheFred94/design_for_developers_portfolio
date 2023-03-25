@@ -662,6 +662,10 @@ li {
     grid-column: 1 / 3;
   }
 
+  nav {
+    width: 100px;
+  }
+
   .carousel {
     grid-template-rows: 50px 1fr 1fr 1fr 1fr;
   }
