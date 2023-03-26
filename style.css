@@ -191,6 +191,7 @@ button span:hover::before {
 
 /* GENERAL */
 img {
+  border-radius: 5px;
   width: 70%;
   height: auto;
 }
