@@ -86,7 +86,16 @@ nav ul li a {
   font-weight: 500;
 }
 
-nav ul li a::before {
+.project_button {
+  text-align: center;
+  text-decoration: none;
+  color: var(--black);
+  font-weight: 800;
+  padding-top: 1.2rem;
+}
+
+nav ul li a::before,
+.project_button::before {
   content: "";
   display: inline-block;
   position: absolute;
@@ -102,21 +111,25 @@ nav ul li .portfolio::before {
 nav ul li .projects::before {
   background: var(--yellow);
 }
-nav ul li .about::before {
+nav ul li .about::before,
+.project_button::before {
   background: var(--blue);
 }
 
-nav ul li a::before {
+nav ul li a::before,
+.project_button::before {
   transform: scaleX(0);
   transform-origin: bottom right;
 }
 
-nav ul li a:hover {
+nav ul li a:hover,
+.project_button:hover {
   transition: 0.5s;
   color: white;
 }
 
-nav ul li a:hover::before {
+nav ul li a:hover::before,
+.project_button:hover::before {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
@@ -124,12 +137,27 @@ nav ul li a:hover::before {
 /* --------- */
 
 button {
+  font-size: var(--a_size);
+  text-transform: uppercase;
   border-style: none;
   cursor: pointer;
   background-color: transparent;
   z-index: 1;
   font-family: "Jost", sans-serif;
   position: relative;
+}
+
+.project_button {
+  font-size: var(--a_size);
+  text-transform: uppercase;
+  border-style: none;
+  cursor: pointer;
+  background-color: transparent;
+  z-index: 1;
+  font-family: "Jost", sans-serif;
+  position: relative;
+  grid-column: 2/3;
+  grid-row: 5;
 }
 
 button span::before {
@@ -143,7 +171,7 @@ button span::before {
 }
 
 button span::before {
-  background: var(--teal);
+  background: var(--blue);
 }
 
 button span::before {
@@ -300,7 +328,7 @@ nav a {
 }
 
 .active {
-  background-color: var(--teal);
+  background-color: var(--blue);
   color: var(--white);
   border-radius: 4px;
 }
