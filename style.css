@@ -16,7 +16,7 @@ body,
   --a_size: clamp(0.8rem, -0.761rem + 7.512vw, 1.5rem);
   --h1_size: clamp(4.5rem, -0.761rem + 7.512vw, 6rem);
   --h2_size: clamp(4rem, -0.761rem + 7.512vw, 5rem);
-  --h3_size: clamp(3rem, 0.384rem + 2.629vw, 4rem);
+  --h3_size: clamp(2rem, 0.384rem + 2.629vw, 4rem);
   --h4_size: clamp(2rem, 0.384rem + 2.629vw, 3rem);
 }
 
@@ -701,6 +701,7 @@ li {
 
   .carousel_img_container {
     grid-column: 1 / 6;
+    grid-row: 3;
   }
 
   .carousel__slide .carousel__content {
@@ -709,7 +710,7 @@ li {
   }
 
   .project_subhead {
-    grid-column: 1 / 4;
+    grid-column: 1 / 6;
   }
 
   .collapsible_container {
