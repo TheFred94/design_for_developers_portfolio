@@ -717,8 +717,11 @@ li {
     grid-column: 1 / 6;
     grid-row: 5;
   }
+  nav {
+    display: none;
+  }
 }
-@media screen and (width >= 1200px) {
+@media screen and (width >= 1400px) {
   img {
     max-width: 900px;
   }
